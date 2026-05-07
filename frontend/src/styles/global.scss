@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #app {
+  height: 100%;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  background-color: #f0f2f5;
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+// Element UI overrides
+.el-table {
+  border-radius: 8px;
+  overflow: hidden;
+  th {
+    background-color: #f5f7fa !important;
+    color: #606266;
+    font-weight: 600;
+  }
+}
+
+.el-card {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06) !important;
+  transition: box-shadow 0.3s ease;
+  &:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+  }
+}
+
+.el-button {
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.el-input__inner {
+  border-radius: 8px;
+  &:focus {
+    border-color: #409eff;
+    box-shadow: 0 0 0 2px rgba(64, 158, 255, 0.15);
+  }
+}
+
+.el-select .el-input__inner {
+  padding-right: 36px;
+}
+.el-select .el-input__suffix {
+  right: 12px;
+}
+
+.el-dialog {
+  border-radius: 16px;
+  overflow: hidden;
+  .el-dialog__header {
+    padding: 20px 24px 16px;
+    border-bottom: 1px solid #f0f0f0;
+    .el-dialog__title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1a1a2e;
+    }
+  }
+  .el-dialog__body {
+    padding: 24px;
+    max-height: 65vh;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #d0d0d0;
+      border-radius: 2px;
+    }
+  }
+  .el-dialog__footer {
+    padding: 16px 24px 20px;
+    border-top: 1px solid #f0f0f0;
+  }
+}
+
+.el-pagination {
+  margin-top: 16px;
+  text-align: right;
+}
+
+.el-tag {
+  border-radius: 6px;
+  border: none;
+  font-weight: 500;
+}
+
+.el-breadcrumb {
+  margin-bottom: 16px;
+}
+
+// Page transitions
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+// Utility classes
+.page-container {
+  padding: 20px;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.table-actions {
+  display: flex;
+  gap: 8px;
+}
+
+// Auto-fill input styling fix
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  -webkit-text-fill-color: #333 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
