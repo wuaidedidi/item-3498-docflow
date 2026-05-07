@@ -1,0 +1,6 @@
+backend/app.jar
+data/
+uploads/
+frontend/node_modules/
+backend/target/
+frontend/dist/
